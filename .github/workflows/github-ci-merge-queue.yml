@@ -1,0 +1,13 @@
+name: Github CI Merge Queue
+
+on:
+  merge_group:
+    branches: ['main']
+    types: ['checks_requested']
+
+jobs:
+  Run-E2E-tests:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Anchor step for merge group
+        run: sleep 40
