@@ -1,0 +1,14 @@
+name: Github CI PR
+
+on:
+  pull_request:
+    branches: ['main']
+    types: ['opened', 'edited', 'reopened', 'synchronize']
+
+jobs:
+  Build-Lint-Unit-Test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: BuildUnitLint all-in-one
+        run: sleep 15
