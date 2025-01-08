@@ -1,4 +1,8 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: A CloudFormation template that does nothing
+Description: A CloudFormation template that creates an S3 bucket
 
-Resources: {}
+Resources:
+  MyS3Bucket:
+    Type: 'AWS::S3::Bucket'
+    Properties:
+      BucketName: my-sample-bucket-gregor-arzouyan
